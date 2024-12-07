@@ -37,3 +37,7 @@ next-env.d.ts
 # aptos
 .aptos
 **/move/build
+
+/supra_node_logs
+
+/supra_node_logs/supra.log
