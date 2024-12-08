@@ -65,6 +65,10 @@ module supra::coins {
         coin::destroy_freeze_cap(usdt_f);
         coin::destroy_freeze_cap(supra_f);
 
+
+        coin::register<USDT>(token_admin);
+        coin::register<SUPRA>(token_admin);
+
         move_to(token_admin, Caps<ETH> { mint: eth_m, burn: eth_b });
         move_to(token_admin, Caps<USDC> { mint: usdc_m, burn: usdc_b });
         move_to(token_admin, Caps<APT> { mint: apt_m, burn: apt_b });
@@ -86,7 +90,6 @@ module supra::coins {
         let account_addr= signer::address_of(token_admin);
         // First ensure the account has a coin store
         ensure_coin_store<CoinType>(token_admin);
-
         let token_admin_addr = signer::address_of(token_admin);
         let caps = borrow_global<Caps<CoinType>>(token_admin_addr);
         let coins = coin::mint<CoinType>(amount, &caps.mint);
