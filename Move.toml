@@ -5,6 +5,9 @@ authors = []
 
 [addresses]
 supra = "0x2b0f67c4e38106cb2eed8c55d99d75c233d539f6ed5f961489c059d99aad4f7c"
+fee_admin="0x2b0f67c4e38106cb2eed8c55d99d75c233d539f6ed5f961489c059d99aad4f7c"
+emergency_admin="0x2b0f67c4e38106cb2eed8c55d99d75c233d539f6ed5f961489c059d99aad4f7c"
+dao_admin="0x2b0f67c4e38106cb2eed8c55d99d75c233d539f6ed5f961489c059d99aad4f7c"
 
 [dev-addresses]
 
